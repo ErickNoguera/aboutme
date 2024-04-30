@@ -1,11 +1,66 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+    <h1>ERICK</h1>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Noguera</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ERICK NOGUERA</h1>
+    </header>
+
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre Mi</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida felis nec magna feugiat, non congue urna fermentum.</p>
+        </section>
+
+        <section id="mis-tecnologias-favoritas">
+            <h2>Mis Tecnologías Favoritas</h2>
+            <div class="tecnologias">
+                <div class="tecnologia"><img src="html_logo.png" alt="HTML"></div>
+                <div class="tecnologia"><img src="css_logo.png" alt="CSS"></div>
+                <div class="tecnologia"><img src="javascript_logo.png" alt="JavaScript"></div>
+                <!-- Agrega más tecnologías según sea necesario -->
+            </div>
+        </section>
+
+        <section id="mis-actividades-favoritas">
+            <h2>Mis Actividades Favoritas</h2>
+            <form id="actividad-form">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                <label for="url-imagen">URL de la Imagen:</label>
+                <input type="url" id="url-imagen" name="url-imagen" required>
+                <button type="submit">Agregar Actividad</button>
+            </form>
+            <div id="actividades-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Mi Página Personal</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
