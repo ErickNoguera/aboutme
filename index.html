@@ -1,46 +1,35 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>ERICK</h1>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erick Noguera</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <title>Erick Noguera</title>
 </head>
 <body>
     <header>
         <h1>ERICK NOGUERA</h1>
+        <nav class="nav-enlaces">
+            <a href="#" class="mi-enlace">Sobre mi</a>
+            <a href="#" class="mi-enlace">Mis tecnologias favoritas</a>
+            <a href="#" class="mi-enlace">Mis actividades preferidas</a>
+        </nav>
     </header>
 
     <main>
         <section id="sobre-mi">
             <h2>Sobre Mi</h2>
+            <div class="mi-foto"><img src="assets/IMG_20210914_121731_077.jpg" alt="MIFOTO"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida felis nec magna feugiat, non congue urna fermentum.</p>
         </section>
 
         <section id="mis-tecnologias-favoritas">
             <h2>Mis Tecnologías Favoritas</h2>
             <div class="tecnologias">
-                <div class="tecnologia"><img src="html_logo.png" alt="HTML"></div>
-                <div class="tecnologia"><img src="css_logo.png" alt="CSS"></div>
-                <div class="tecnologia"><img src="javascript_logo.png" alt="JavaScript"></div>
-                <!-- Agrega más tecnologías según sea necesario -->
+                <div class="tecnologia"><img src="assets/HTML5_logo_and_wordmark.svg - copia.png" alt="HTML"></div>
+                <div class="tecnologia"><img src="assets/logos--css-3.svg" alt="CSS"></div>
+                <div class="tecnologia"><img src="assets/vscode-icons--file-type-js-official.svg" alt="JavaScript"></div>
             </div>
         </section>
 
@@ -55,6 +44,7 @@
                 <input type="url" id="url-imagen" name="url-imagen" required>
                 <button type="submit">Agregar Actividad</button>
             </form>
+            <h2>Estas son mis actividades favoritas</h2>
             <div id="actividades-container"></div>
         </section>
     </main>

@@ -1,5 +1,6 @@
 /* Estilos generales */
 body {
+    background-color: rgb(34, 130, 209);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,9 +8,11 @@ body {
 
 header, footer {
     background-color: #333;
-    color: #fff;
     padding: 20px;
     text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 20px 0;
 }
 
 main {
@@ -21,13 +24,44 @@ section {
     text-align: center;
 }
 
+h1 {
+    align-items: center;
+    font-size: 50px;
+}
+
+
+
 h2 {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.nav-enlaces{
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+}
+
+.mi-enlace {
+    color: aqua;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.mi-foto img{
+    max-width: 15%;
     margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 /* Estilos para las tecnologías favoritas */
 .tecnologias {
     display: flex;
+    text-decoration: none;
+    font-weight: bold;
     justify-content: space-around;
     align-items: center;
 }
@@ -43,18 +77,21 @@ h2 {
 
 /* Estilos para las actividades favoritas */
 #actividad-form {
+    background-color:#b3adad;
     margin-bottom: 20px;
+    padding: 5px;
 }
 
 #actividad-form label {
-    display: block;
-    margin-bottom: 5px;
+    width: 100%;
+    margin-bottom: 10px;
     font-weight: bold;
     font-size: 14px;
 }
 
 #actividad-form input,
 #actividad-form textarea {
+    background-color: #f5f3f3;
     width: 100%;
     margin-bottom: 10px;
     padding: 5px;
