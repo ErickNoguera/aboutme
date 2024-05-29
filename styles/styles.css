@@ -38,17 +38,28 @@ h2 {
     font-weight: bold;
 }
 
+p {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 
 .nav-enlaces{
     display: flex;
     justify-content: center;
-    gap: 300px;
+    gap: 400px;
 }
 
+
 .mi-enlace {
-    color: aqua;
+    color: rgb(34, 130, 209);
     text-decoration: none;
     padding: 10px 20px;
+}
+
+.mi-enlace:hover {
+    background-color: #080808;
 }
 
 .mi-foto img{
@@ -57,7 +68,6 @@ h2 {
     border-radius: 50%;
 }
 
-/* Estilos para las tecnologías favoritas */
 .tecnologias {
     display: flex;
     text-decoration: none;
@@ -72,21 +82,21 @@ h2 {
 }
 
 .tecnologia img {
-    max-width: 100%;
+    max-width: 200%;
 }
 
-/* Estilos para las actividades favoritas */
+
 #actividad-form {
     background-color:#b3adad;
     margin-bottom: 20px;
     padding: 5px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #actividad-form label {
     width: 100%;
     margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 14px;
 }
 
 #actividad-form input,
@@ -103,10 +113,12 @@ h2 {
     border: none;
     padding: 8px 20px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 #actividad-form button:hover {
-    background-color: #555;
+    background-color: #080808;
+    font-size: 20px;
 }
 
 .actividad {
