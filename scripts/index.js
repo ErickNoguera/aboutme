@@ -20,24 +20,68 @@ createActivity = (title,description,imgUrl) => {
     this.activities.push(newActivity);
     };
 deleteActivity = (id) =>{
-        let filtered = this.activities.filter((act) => act.id === id);
+        let filtered = this.activities.filter((act) => act.id !== id);
         this.activities = filtered;
     };
 }
 
-const repo = new Repository();
-repo.createActivity('Title 1', 'Description 1', 'img1.jpg');
-repo.createActivity('Title 2', 'Description 2', 'img2.jpg');
-console.log(repo.getAllActivities());
 
-repo.deleteActivity(1);
-console.log(repo.getAllActivities());
+//Parte del DOM
+const repo = new Repository()
+console.log("hola mundo")
+function builActivity(act) {
+    const {id, title, description, imgUrl} = act
+    const card = document.createElement('div');
+
+    card.className = "card";
+
+    card.id = id;
+
+    const titleTag = document.createElement("h3")
+    titleTag.innerText = title
+
+    const descriptionTag = document.createElement("p")
+    descriptionTag.innerText = description
+
+    const imgTag = document.createElement("img")
+    imgTag.src = imgUrl
+    imgTag.alt = `imagen de ${act.title}`; 
 
 
+    card.appendChild(titleTag);
+    card.appendChild(descriptionTag);
+    card.appendChild(imgTag);
+
+    return card;
+}
+
+function builActivities () {
+    const container = document.getElementById("actividades-container");
+    container.innerHTML = ""
+    const activities = repo.getAllActivities()
+    const activitiesHTML = activities.map((activ) => builActivity(activ))
 
 
+    activitiesHTML.forEach(element => {
+        container.appendChild(element);
+    });
+}
 
+function handleSubmit(event){
+    event.preventDefault()
+    const title = document.getElementById("titulo")
+    const description = document.getElementById("descripcion")
+    const imgUrl = document.getElementById("url-imagen")
+    if (title.value == "" || description.value == "" || imgUrl.value == "") {
+        alert("Todos los campos son obligatorios");
+        return
+    } 
+    repo.createActivity(title.value, description.value, imgUrl.value)
+    builActivities()
+    title.value = ""
+    description.value = ""
+    imgUrl.value = ""
+}
 
-
-
-
+const button = document.getElementById("boton-agregar");
+button.addEventListener("click",handleSubmit);
