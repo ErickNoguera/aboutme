@@ -28,7 +28,7 @@ deleteActivity = (id) =>{
 
 //Parte del DOM
 const repo = new Repository()
-console.log("hola mundo")
+
 function builActivity(act) {
     const {id, title, description, imgUrl} = act
     const card = document.createElement('div');
