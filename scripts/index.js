@@ -20,8 +20,7 @@ createActivity = (title,description,imgUrl) => {
     this.activities.push(newActivity);
     };
 deleteActivity = (id) =>{
-        let filtered = this.activities.filter((act) => act.id !== id);
-        this.activities = filtered;
+        this.activities = this.activities.filter((act) => act.id !== id);
     };
 }
 
@@ -29,12 +28,11 @@ deleteActivity = (id) =>{
 //Parte del DOM
 const repo = new Repository()
 
-function builActivity(act) {
+function buildActivity(act) {
     const {id, title, description, imgUrl} = act
     const card = document.createElement('div');
 
     card.className = "card";
-
     card.id = id;
 
     const titleTag = document.createElement("h3")
@@ -47,6 +45,10 @@ function builActivity(act) {
     imgTag.src = imgUrl
     imgTag.alt = `imagen de ${act.title}`; 
 
+    card.addEventListener('click', () => {
+        repo.deleteActivity(id);
+        buildActivities();
+    });
 
     card.appendChild(titleTag);
     card.appendChild(descriptionTag);
@@ -55,11 +57,11 @@ function builActivity(act) {
     return card;
 }
 
-function builActivities () {
+function buildActivities () {
     const container = document.getElementById("actividades-container");
-    container.innerHTML = ""
-    const activities = repo.getAllActivities()
-    const activitiesHTML = activities.map((activ) => builActivity(activ))
+    container.innerHTML = "";
+    const activities = repo.getAllActivities();
+    const activitiesHTML = activities.map((activ) => buildActivity(activ));
 
 
     activitiesHTML.forEach(element => {
@@ -68,20 +70,34 @@ function builActivities () {
 }
 
 function handleSubmit(event){
-    event.preventDefault()
-    const title = document.getElementById("titulo")
-    const description = document.getElementById("descripcion")
+    event.preventDefault();
+    const title = document.getElementById("titulo");
+    const description = document.getElementById("descripcion");
     const imgUrl = document.getElementById("url-imagen")
     if (title.value == "" || description.value == "" || imgUrl.value == "") {
         alert("Todos los campos son obligatorios");
         return
-    } 
-    repo.createActivity(title.value, description.value, imgUrl.value)
-    builActivities()
-    title.value = ""
-    description.value = ""
-    imgUrl.value = ""
-}
+    };
+    repo.createActivity(title.value, description.value, imgUrl.value);
+    buildActivities();
+    title.value = "";
+    description.value = "";
+    imgUrl.value = "";
+};
 
 const button = document.getElementById("boton-agregar");
 button.addEventListener("click",handleSubmit);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

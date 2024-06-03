@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
+    "test-browser": "jasmine-browser-runner server",
     "start": "live-server"
   },
   "keywords": [],
@@ -13,5 +14,9 @@
   "dependencies": {
     "jasmine": "^5.1.0",
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "jasmine-browser-runner": "^2.4.0",
+    "jasmine-core": "^5.1.2"
   }
 }
