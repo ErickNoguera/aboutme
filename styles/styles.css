@@ -6,7 +6,8 @@ body {
     padding: 0;
 }
 
-header, footer {
+header,
+footer {
     background-color: #333;
     padding: 20px;
     text-align: center;
@@ -45,7 +46,7 @@ p {
 }
 
 
-.nav-enlaces{
+.nav-enlaces {
     display: flex;
     justify-content: center;
     gap: 400px;
@@ -62,7 +63,7 @@ p {
     background-color: #080808;
 }
 
-.mi-foto img{
+.mi-foto img {
     max-width: 15%;
     margin-bottom: 10px;
     border-radius: 50%;
@@ -87,7 +88,7 @@ p {
 
 
 #actividad-form {
-    background-color:#b3adad;
+    background-color: #b3adad;
     margin-bottom: 20px;
     padding: 5px;
     font-weight: bold;
@@ -135,36 +136,97 @@ p {
 
 .card {
     border: 1px solid #ddd;
-    border-radius: 1rem;  
-    padding: 16px;  
+    border-radius: 1rem;
+    padding: 16px;
     margin: 16px;
-    text-align: center;  
+    text-align: center;
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #cdd0d1; 
+    background-color: #cdd0d1;
 }
 
 .card h3 {
     font-size: 1.5em;
     margin: 0.5em 0;
-    text-align: center;  
+    text-align: center;
 }
 
 .card p {
     font-size: 1em;
     color: #555;
-    margin: 0.5em 0;  
+    margin: 0.5em 0;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
-    max-height: 200px; 
+    max-height: 200px;
     object-fit: cover;
     border-radius: 4px;
     margin-top: 10px;
 }
 
-#actividades-container{
+#actividades-container {
     display: flex;
+}
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .nav-enlaces {
+        flex-direction: column;
+    }
+
+    .gap-400 {
+        display: none;
+    }
+
+    .main,
+    header,
+    footer,
+    p,
+    h2,
+    h1,
+    .card,
+    .card h3,
+    .card p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Media query para pantallas medianas (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-enlaces {
+        gap: 200px;
+    }
+}
+
+/* Media query para pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .nav-enlaces {
+        gap: 400px;
+    }
+}
+
+/* Media query para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+
+    .main,
+    header,
+    footer,
+    p,
+    h2,
+    h1,
+    .card,
+    .card h3,
+    .card p {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
