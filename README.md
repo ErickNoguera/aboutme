@@ -19,6 +19,7 @@ Este es mi primer proyecto de programación, creado con **HTML** y **CSS**, enfo
 ## 🛠️ Tecnologías Usadas
 - **HTML** (Manipulación del DOM)
 - **CSS** (Estilos y diseño)
+- **JS** (Logica de la app)
 
 ## 📦 Requisitos Previos
 Este proyecto se desarrolló en un entorno de **Node.js**, por lo que es necesario tener instalado:
